@@ -1,0 +1,6 @@
+[submodule "m3m3-frontend"]
+	path = m3m3-frontend
+	url = https://github.com/Kasparsu/m3m3-frontend.git
+[submodule "m3m3-backend"]
+	path = m3m3-backend
+	url = https://github.com/Kasparsu/m3m3-backend.git
