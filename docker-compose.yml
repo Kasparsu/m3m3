@@ -38,7 +38,13 @@ services:
       - "MYSQL_ROOT_PASSWORD=secret"
     ports:
         - "33061:3306"
-        
-  
+  node:
+    build:
+        context: ./docker
+        dockerfile: node.dockerfile
+    volumes_from:
+      - app
+    working_dir: /var/www/m3m3-frontend
+    command: bash -c "npm install && npm rebuild node-sass && nuxt --hostname 0.0.0.0 --port 3000"
 volumes:
   dbdata:
